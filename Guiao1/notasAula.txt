@@ -1,0 +1,13 @@
+ex6:
+
+para encontrar uma struct vamos lendo as estruturas, quando finalmente encontramos a struct correta, 
+o nosso cursor já está à frente da struct, logo fazemos lseek para trás.
+
+ex7:
+usar o lseek para saltar x structs para a frente
+
+chmod +x nome_do_ficheiro
+
+$1 é o primeiro argumento recebido do script
+
+lseek devolve a quantos bytes está do inicio do ficheiro

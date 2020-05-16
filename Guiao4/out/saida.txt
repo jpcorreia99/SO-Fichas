@@ -1,0 +1,24 @@
+dup -> cria uma cópia de uma descritor de ficheiro
+<unistd.h> - chamadas ao sistema
+
+int dup(ind fd)
+- cria uma cópia do descritor fd
+-devolve cópia ou erro
+-escolhe o descritor possível com menor numero
+-mantém o modo e posição do descritor original
+
+
+int dup2(int fd1, int fd2)
+-cria uma cópia do fd1 para o fd2
+- devolve o fd2 ou um erro
+-se o fd2 estiver aberto é chamado unm close() implícito
+- mantém modo e posição do fd original
+
+
+Considerações:
+- o fd original deve ser fechado (close()) depois do dup caso já não seja necessário
+- ao redirecionar o stdout para um ficheiro, o tamanho do buffer de memória para deuma linha para o tamanho utilizado
+pelo sistema de ficheiros(4Kb/8Kb). Funções como a printf() deixam de fazer buffering à linha.
+  -- a função fflush(stdout) permite forçar a persistencia dos dados em buffer 
+  -- a função setbuf(stdout, NULL) permite desativar o buffer de memória
+

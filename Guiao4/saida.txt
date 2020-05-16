@@ -1,0 +1,4 @@
+a.out
+dups.pdf
+guiao-04 - 2020.pdf
+main.c

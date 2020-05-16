@@ -1,0 +1,4 @@
+isto 
+é um
+teste 
+do programa
