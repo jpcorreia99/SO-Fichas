@@ -90,6 +90,7 @@ int ex4(){
     close(fildes[1]); // fecha o descritor de escrita para o pai e filho logo
         if(fork()==0){
             dup2(fildes[0],0); // pois o wc lê do stdin
+            close(fildes[0])
             execlp("wc","wc","-l",NULL);
             _exit(-1);
         }else{
